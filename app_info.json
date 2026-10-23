@@ -1,0 +1,18 @@
+{
+  "slug": "TM",
+  "entry": "app.py",
+  "title": "Hábitat inteligente",
+  "category": "Imagen",
+  "headline": "Un gesto.",
+  "accent": "Una respuesta.",
+  "description": "Usa un modelo entrenado para distinguir rostro y gesto en una captura.",
+  "input": "Fotografía de la cámara.",
+  "output": "Probabilidades de dos clases y mensaje de acceso según el umbral.",
+  "steps": "Toma una foto y observa las probabilidades de rostro y gesto. El mensaje cambia cuando la probabilidad de gesto supera 0,5.",
+  "technology": "Teachable Machine · Keras · TensorFlow",
+  "limits": "Es una demostración de clasificación de dos clases, no un sistema de autenticación seguro.",
+  "image": "OIG5.jpg",
+  "url": "https://csxqwm99qyob4zptxventz.streamlit.app/",
+  "repo": "https://github.com/Jhuza/TM",
+  "kind": "vision"
+}
