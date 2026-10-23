@@ -5,49 +5,15 @@ from keras.models import load_model
 import platform
 
 # Configuración de la página
-st.set_page_config(
-    page_title="Hábitat Inteligente",
-    page_icon="🏠",
-    layout="centered"
-)
 
 # Estilos visuales
-st.markdown("""
-<style>
-    .welcome-card {
-        padding: 28px;
-        margin-top: 20px;
-        border-radius: 20px;
-        text-align: center;
-        color: white;
-        background: linear-gradient(135deg, #1761C9, #0F393B);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-    }
-
-    .welcome-card h1 {
-        margin-bottom: 10px;
-        font-size: 34px;
-    }
-
-    .welcome-card h2 {
-        margin: 0;
-        font-size: 21px;
-        font-weight: 500;
-        line-height: 1.4;
-    }
-
-    .probability {
-        margin-top: 16px;
-        font-size: 15px;
-        opacity: 0.85;
-    }
-</style>
-""", unsafe_allow_html=True)
 
 # Carga del modelo
 model = load_model("keras_model.h5", compile=False)
 
-st.title("🏠 Hábitat inteligente")
+from aurora import app_header, footer
+app_header()
+
 st.write("Sistema de acceso mediante reconocimiento de imágenes")
 st.caption(f"Versión de Python: {platform.python_version()}")
 
@@ -120,3 +86,6 @@ if img_file_buffer is not None:
             "👋 No se reconoció el gesto de acceso. "
             "Intenta tomar otra fotografía con mejor iluminación."
         )
+
+
+footer("TEXTO / IMAGEN / VOZ / INTERACCIÓN")
